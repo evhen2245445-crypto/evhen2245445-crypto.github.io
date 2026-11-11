@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZHENYA | Personal Card</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 20%, #303030 0%, #151515 45%, #090909 100%);
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px;
+}
+
+.card {
+  width: 100%;
+  max-width: 390px;
+  padding: 42px 25px 30px;
+  border: 1px solid #414141;
+  border-radius: 26px;
+  background: linear-gradient(145deg, #242424, #111111);
+  box-shadow: 0 25px 70px #0009;
+  text-align: center;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 24px;
+  color: #dedede;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 34px;
+  letter-spacing: 9px;
+  margin: 0 0 12px 9px;
+  font-weight: 500;
+}
+
+.subtitle {
+  color: #929292;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 38px;
+}
+
+.line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #777, transparent);
+  margin-bottom: 28px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 20px;
+  margin: 13px 0;
+  border: 1px solid #454545;
+  border-radius: 13px;
+  background: #202020;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: .25s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #353535;
+  border-color: #aaa;
+  transform: translateY(-2px);
+}
+
+.arrow {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.payment-box {
+  display: none;
+  padding: 17px;
+  margin-top: 12px;
+  background: #181818;
+  border: 1px solid #444;
+  border-radius: 13px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.payment-box a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer {
+  color: #666;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="logo">Z</div>
+
+  <h1>ZHENYA</h1>
+
+  <div class="subtitle">
+    PERSONAL CONTACTS
+  </div>
+
+  <div class="line"></div>
+
+  <a class="btn" href="tel:+380974842902">
+    <span>☎ &nbsp; CALL ME</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <a class="btn"
+     href="https://www.instagram.com/__zhenyok___/"
+     target="_blank">
+    <span>◎ &nbsp; INSTAGRAM</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <button class="btn" onclick="showPayment()">
+    <span>▣ &nbsp; PAYMENT</span>
+    <span class="arrow">↗</span>
+  </button>
+
+  <div class="payment-box" id="payment">
+    Оплата через А-Банк
+    <br><br>
+    <a id="paylink" href="#">
+      ПЕРЕЙТИ ДО ОПЛАТИ
+    </a>
+  </div>
+
+  <div class="footer">
+    NFC DIGITAL BUSINESS CARD
+  </div>
+
+</div>
+
+<script>
+function showPayment() {
+  const box = document.getElementById("payment");
+  box.style.display =
+    box.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
